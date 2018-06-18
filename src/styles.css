@@ -1,0 +1,19 @@
+#root {
+	height: 100vh;
+}
+
+.Home {
+	background: #000 url('./react.png') no-repeat center center;
+	background-size: 360px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.Item:hover {
+	background-color: #67DBF9 !important;
+}
+
+.Item:hover h4 {
+	color: #fff !important;
+}
