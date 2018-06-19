@@ -34,6 +34,7 @@ import types1Code from './assets/types1';
 import types2Code from './assets/types2';
 import resolvers1 from './assets/resolvers1';
 import resolvers2 from './assets/resolvers2';
+import rest from './assets/rest.png';
 import Back from './Back';
 
 const theme = createTheme(
@@ -71,6 +72,9 @@ export default class ApolloQL extends React.Component {
                     </Slide>
                     <Slide>
                         <Image src={ql2} display="inline"/>
+                    </Slide>
+                    <Slide>
+                        <Image src={rest} width={1000} display="inline"/>
                     </Slide>
                     <Slide>
                         <Image src={ql3} display="inline"/>
@@ -125,7 +129,6 @@ export default class ApolloQL extends React.Component {
                             <Appear><ListItem margin="10px 0">Take what you need</ListItem></Appear>
                             <Appear><ListItem margin="10px 0">Consumer decides response data</ListItem></Appear>
                             <Appear><ListItem margin="10px 0">Get everything in a single request</ListItem></Appear>
-                            <Appear><ListItem margin="10px 0">Get only what you need</ListItem></Appear>
                             <Appear><ListItem margin="10px 0">Solves under/over fetching</ListItem></Appear>
                         </List>
                     </Slide>
@@ -135,54 +138,54 @@ export default class ApolloQL extends React.Component {
                             <ListItem margin="10px 0">Set of libraries/tools for GraphQL server/client</ListItem>
                             <Appear><ListItem margin="10px 0">Fully compatible with GraphQL spec</ListItem></Appear>
                             <Appear><ListItem margin="10px 0">Very feature rich</ListItem></Appear>
-                            <Appear><ListItem margin="10px 0">Binding for every major JS framework</ListItem></Appear>
                             <Appear><ListItem margin="10px 0">Binding for every major BE language</ListItem></Appear>
+                            <Appear><ListItem margin="10px 0">Binding for every major JS framework</ListItem></Appear>
                         </List>
                     </Slide>
                     <Slide>
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Server setup</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Server setup</Heading>
                         <CodePane lang="javascript" source={serverSetupCode} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Types</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Types</Heading>
                         <CodePane lang="graphql" source={types1Code} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Types</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Types</Heading>
                         <CodePane lang="graphql" source={types2Code} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Resolvers</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Resolvers</Heading>
                         <CodePane lang="javascript" source={resolvers1} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Resolvers</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Resolvers</Heading>
                         <CodePane lang="javascript" source={resolvers2} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Microservices</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Microservices</Heading>
                         <Image src={microservices} display="inline"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Client setup</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Client setup</Heading>
                         <CodePane margin="0px 0px 20px 0px" lang="javascript"
                                   source="npm install apollo-boost react-apollo graphql-tag graphql --save"/>
                         <CodePane lang="javascript" source={clientSetup1} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Client setup</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Client setup</Heading>
                         <CodePane lang="javascript" source={clientSetup2} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px" fit>Query component</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Query component</Heading>
                         <CodePane lang="javascript" source={queryComponent} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Caching</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Caching</Heading>
                         <CodePane lang="javascript" source={caching1} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Caching</Heading>
+                        <Heading size={4} textColor="quartenary" margin="0px 0px 40px 0px">Caching</Heading>
                         <CodePane lang="javascript" source={caching2} theme="external"/>
                     </Slide>
                 </Deck>
