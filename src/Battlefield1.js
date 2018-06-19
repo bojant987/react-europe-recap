@@ -26,6 +26,8 @@ import {
 import createTheme from 'spectacle/lib/themes/default';
 import image1 from './btf1-ui-1.png';
 import image2 from './btf1-ui-2.jpg';
+import bf1 from './battlefield1.jpg';
+import reactLogo from './react.png';
 import Back from './Back';
 
 const theme = createTheme(
@@ -54,14 +56,18 @@ export default class Battlefield1 extends React.Component {
                     transitionDuration={500}
                     theme={theme}
                 >
-                    <Slide>
-                        <Heading textColor="quartenary" fit>Battlefield 1 + React</Heading>
+                    <Slide bgImage={bf1} bgSize="contain" bgRepeat="no-repeat" align="center flex-start">
+                        {/*<Heading textColor="quartenary" fit>Battlefield 1 + React</Heading>*/}
+                        <Image src={reactLogo} width={360} />
                     </Slide>
                     <Slide>
                         <Image src={image1} />
                     </Slide>
                     <Slide>
                         <Image src={image2} />
+                    </Slide>
+                    <Slide>
+                        <Heading textColor="quartenary">100% React</Heading>
                     </Slide>
                     <Slide>
                         <Heading textColor="quartenary">Why?</Heading>

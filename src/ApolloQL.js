@@ -31,17 +31,14 @@ import ql3 from './ql-3.png';
 import ql4 from './ql-4.png';
 import ql5 from './ql-5.png';
 import ql6 from './ql-6.png';
-import query1 from './query-1.png';
-import query2 from './query-2.png';
-import query3 from './query-3.png';
-import query4 from './query-4.png';
-import serverSetup from './server-setup.png';
-import res1 from './ql-res1.png';
-import res2 from './ql-res2.png';
-import types1 from './ql-types1.png';
-import types2 from './ql-types2.png';
 import microservices from './microservices.png';
-// eslint-disable-next-line
+import {clientSetup1} from './assets/clientSetup';
+import {clientSetup2} from './assets/clientSetup';
+import queryComponent from './assets/queryComponent';
+import {caching1} from './assets/caching';
+import {caching2} from './assets/caching';
+import apolloql from './apolloql.jpg';
+import {query1, query2, query3, response} from './assets/queries';
 import serverSetupCode from './assets/serverSetup';
 import types1Code from './assets/types1';
 import types2Code from './assets/types2';
@@ -69,7 +66,7 @@ export default class ApolloQL extends React.Component {
                 <Back setActive={() => {
                     this.props.setActive("home");
                     window.location.reload();
-                }} />
+                }}/>
                 <Deck
                     transition={['slide']}
                     transitionDuration={500}
@@ -78,42 +75,67 @@ export default class ApolloQL extends React.Component {
                 >
                     <Slide>
                         <Heading textColor="quartenary" fit>GraphQL with Apollo</Heading>
+                        {/*<Image src={apolloql} style={{*/}
+                        {/*position: "absolute",*/}
+                        {/*height: "100%",*/}
+                        {/*width: "100%",*/}
+                        {/*}}/>*/}
                     </Slide>
                     <Slide>
-                        <Image src={ql1} display="inline" />
+                        <Image src={ql1} display="inline"/>
                     </Slide>
                     <Slide>
-                        <Image src={ql2} display="inline" />
+                        <Image src={ql2} display="inline"/>
                     </Slide>
                     <Slide>
-                        <Image src={ql3} display="inline" />
+                        <Image src={ql3} display="inline"/>
+                    </Slide>
+                    <Slide align="flex-start center">
+                        <div style={{display: "flex", width: "120%"}}>
+                            <div style={{flex: "1 0 70%"}}>
+                                <Image src={ql4} display="inline"/>
+                            </div>
+                            <div style={{flex: "1 0 30%"}}>
+                                <Appear>
+                                    <CodePane lang="graphql" source={query1} theme="external"/>
+                                </Appear>
+                            </div>
+                        </div>
+                    </Slide>
+                    <Slide align="flex-start center">
+                        <div style={{display: "flex", width: "120%"}}>
+                            <div style={{flex: "1 0 70%"}}>
+                                <Image src={ql5} display="inline"/>
+                            </div>
+                            <div style={{flex: "1 0 30%"}}>
+                                <Appear>
+                                    <CodePane lang="graphql" source={query2} theme="external"/>
+                                </Appear>
+                            </div>
+                        </div>
+                    </Slide>
+                    <Slide align="flex-start center">
+                        <div style={{display: "flex", width: "120%"}}>
+                            <div style={{flex: "1 0 70%"}}>
+                                <Image src={ql6} display="inline"/>
+                            </div>
+                            <div style={{flex: "1 0 30%"}}>
+                                <Appear>
+                                    <CodePane lang="graphql" source={query3} theme="external"/>
+                                </Appear>
+                            </div>
+                        </div>
                     </Slide>
                     <Slide align="center flex-start">
-                        <Image src={ql4} display="inline" />
-                        <Appear>
-                            <Image src={query1} width={400} display="inline" />
-                        </Appear>
-                    </Slide>
-                    <Slide align="center flex-start">
-                        <Image src={ql5} display="inline" />
-                        <Appear>
-                            <Image src={query2} width={400} display="inline" />
-                        </Appear>
-                    </Slide>
-                    <Slide align="center flex-start">
-                        <Image src={ql6} display="inline" />
-                        <Appear>
-                            <Image src={query3} width={400} display="inline" />
-                        </Appear>
-                    </Slide>
-                    <Slide align="center flex-start">
-                        <Image src={query4} display="inline" />
+                        <CodePane lang="json" source={response} theme="external"/>
                     </Slide>
                     <Slide>
                         <List textColor="quartenary" margin="40px 0px 0px 0px">
                             <ListItem margin="10px 0">Query language for APIs</ListItem>
-                            <Appear><ListItem margin="10px 0">Abstract away details you don't need to know about</ListItem></Appear>
-                            <Appear><ListItem margin="10px 0">Typically served over HTTP via a single endpoint</ListItem></Appear>
+                            <Appear><ListItem margin="10px 0">Abstract away details you don't need to know
+                                about</ListItem></Appear>
+                            <Appear><ListItem margin="10px 0">Typically served over HTTP via a single
+                                endpoint</ListItem></Appear>
                             <Appear><ListItem margin="10px 0">What over how</ListItem></Appear>
                             <Appear><ListItem margin="10px 0">Take what you need</ListItem></Appear>
                             <Appear><ListItem margin="10px 0">Consumer decides response data</ListItem></Appear>
@@ -134,40 +156,49 @@ export default class ApolloQL extends React.Component {
                     </Slide>
                     <Slide>
                         <Heading textColor="quartenary" margin="0px 0px 40px 0px">Server setup</Heading>
-                        {/*<Image src={serverSetup} display="inline" />*/}
                         <CodePane lang="javascript" source={serverSetupCode} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
                         <Heading textColor="quartenary" margin="0px 0px 40px 0px">Types</Heading>
-                        <CodePane lang="javascript" source={types1Code} theme="external"/>
-                        <Appear>
-                            <CodePane lang="javascript" source={types2Code} theme="external"/>
-                        </Appear>
-                        {/*<Image src={types1} display="inline" />*/}
-                        {/*<Image src={types2} display="inline" />*/}
+                        <CodePane lang="graphql" source={types1Code} theme="external"/>
+                    </Slide>
+                    <Slide align="center flex-start">
+                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Types</Heading>
+                        <CodePane lang="graphql" source={types2Code} theme="external"/>
                     </Slide>
                     <Slide align="center flex-start">
                         <Heading textColor="quartenary" margin="0px 0px 40px 0px">Resolvers</Heading>
-                        {/*<Image src={res1} display="inline" />*/}
-                        {/*<Image src={res2} display="inline" />*/}
                         <CodePane lang="javascript" source={resolvers1} theme="external"/>
-                        <Appear>
-                            <CodePane lang="javascript" source={resolvers2} theme="external"/>
-                        </Appear>
                     </Slide>
-                    <Slide>
+                    <Slide align="center flex-start">
+                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Resolvers</Heading>
+                        <CodePane lang="javascript" source={resolvers2} theme="external"/>
+                    </Slide>
+                    <Slide align="center flex-start">
                         <Heading textColor="quartenary" margin="0px 0px 40px 0px">Microservices</Heading>
-                        <Image src={microservices} display="inline" />
+                        <Image src={microservices} display="inline"/>
                     </Slide>
-                    <Slide>
+                    <Slide align="center flex-start">
                         <Heading textColor="quartenary" margin="0px 0px 40px 0px">Client setup</Heading>
-                        <CodePane lang="javascript" source="npm install apollo-boost react-apollo graphql-tag graphql --save" />
+                        <CodePane margin="0px 0px 20px 0px" lang="javascript"
+                                  source="npm install apollo-boost react-apollo graphql-tag graphql --save"/>
+                        <CodePane lang="javascript" source={clientSetup1} theme="external"/>
                     </Slide>
-                    <Slide>
+                    <Slide align="center flex-start">
+                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Client setup</Heading>
+                        <CodePane lang="javascript" source={clientSetup2} theme="external"/>
+                    </Slide>
+                    <Slide align="center flex-start">
+                        <Heading textColor="quartenary" margin="0px 0px 40px 0px" fit>Query component</Heading>
+                        <CodePane lang="javascript" source={queryComponent} theme="external"/>
+                    </Slide>
+                    <Slide align="center flex-start">
                         <Heading textColor="quartenary" margin="0px 0px 40px 0px">Caching</Heading>
+                        <CodePane lang="javascript" source={caching1} theme="external"/>
                     </Slide>
-                    <Slide>
-                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Query component</Heading>
+                    <Slide align="center flex-start">
+                        <Heading textColor="quartenary" margin="0px 0px 40px 0px">Caching</Heading>
+                        <CodePane lang="javascript" source={caching2} theme="external"/>
                     </Slide>
                 </Deck>
             </div>

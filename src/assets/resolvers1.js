@@ -2,7 +2,7 @@ export default
 `const Query = {
     user: (root, {id}) => db.users.get(id),
     company: (root, {id}) => db.companies.get(id),
-    positions: (root, {id}) => db.positions.get(id),
+    positions: (root) => db.positions.list(),
 };
 
 const Mutation = {

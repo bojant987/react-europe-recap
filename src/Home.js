@@ -29,6 +29,7 @@ import btf1 from './battlefield1.jpg';
 import camera from './camera.png';
 import apollo from './apollo.png';
 import reason from './reason.png';
+import nope from './nope.png';
 
 const itemStyle = {
     width: 300,
@@ -113,6 +114,14 @@ export default class Home extends React.Component {
                         >
                             <img src={reason} style={imageStyle}/>
                             <h4 style={h4Style}>Reason + React</h4>
+                            <img src={nope} style={{
+                                width: "70%",
+                                height: "70%",
+                                position: "absolute",
+                                left: "50%",
+                                top: "50%",
+                                transform: "translate(-50%, -70%)",
+                            }} />
                         </div>
                         <div
                             style={itemStyle}

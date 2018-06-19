@@ -6,6 +6,6 @@ export default
 
 const User = {
     company: user => db.companies.get(user.companyId),
-    position: user => db.companies.get(user.positionId),
+    position: user => db.positions.get(user.positionId),
     connections: user => db.users.findConnections(user.id),
 };`;
