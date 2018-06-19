@@ -4,23 +4,13 @@ import React from 'react';
 // Import Spectacle Core tags
 import {
     Appear,
-    BlockQuote,
-    Cite,
-    CodePane,
-    Code,
     Deck,
-    Fill,
-    Fit,
     Heading,
-    Image,
-    Layout,
     ListItem,
     List,
-    Quote,
     Slide,
     Text,
     Link,
-    GoToAction
 } from 'spectacle';
 import Back from './Back';
 

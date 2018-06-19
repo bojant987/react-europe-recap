@@ -1,39 +1,14 @@
 // Import React
 import React from 'react';
 
-// Import Spectacle Core tags
-import {
-    Appear,
-    BlockQuote,
-    Cite,
-    CodePane,
-    Code,
-    Deck,
-    Fill,
-    Fit,
-    Heading,
-    Image,
-    Layout,
-    ListItem,
-    List,
-    Quote,
-    Slide,
-    Text,
-    GoToAction
-} from 'spectacle';
-
-// Import theme
-import createTheme from 'spectacle/lib/themes/default';
-
-import btf1 from './battlefield1.jpg';
-import camera from './camera.png';
-import apollo from './apollo.png';
-import reason from './reason.png';
-import nope from './nope.png';
+import btf1 from './assets/battlefield1.jpg';
+import camera from './assets/camera.png';
+import apollo from './assets/apollo.png';
+import reason from './assets/reason.png';
+import nope from './assets/nope.png';
 
 const itemStyle = {
     width: 300,
-    // margin: "100px 50px 0 50px",
     padding: 10,
     border: "1px solid #000",
     cursor: "pointer",

@@ -1,5 +1,4 @@
 import React from 'react';
-import { GoToAction } from 'spectacle';
 
 export default class Back extends React.Component {
     render() {

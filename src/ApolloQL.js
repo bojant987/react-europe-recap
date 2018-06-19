@@ -4,40 +4,30 @@ import React from 'react';
 // Import Spectacle Core tags
 import {
     Appear,
-    BlockQuote,
-    Cite,
     CodePane,
-    Code,
     Deck,
-    Fill,
-    Fit,
     Heading,
     Image,
-    Layout,
     ListItem,
     List,
-    Quote,
     Slide,
-    Text,
-    GoToAction
 } from 'spectacle';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
 
-import ql1 from './ql-1.png';
-import ql2 from './ql-2.png';
-import ql3 from './ql-3.png';
-import ql4 from './ql-4.png';
-import ql5 from './ql-5.png';
-import ql6 from './ql-6.png';
-import microservices from './microservices.png';
+import ql1 from './assets/ql-1.png';
+import ql2 from './assets/ql-2.png';
+import ql3 from './assets/ql-3.png';
+import ql4 from './assets/ql-4.png';
+import ql5 from './assets/ql-5.png';
+import ql6 from './assets/ql-6.png';
+import microservices from './assets/microservices.png';
 import {clientSetup1} from './assets/clientSetup';
 import {clientSetup2} from './assets/clientSetup';
 import queryComponent from './assets/queryComponent';
 import {caching1} from './assets/caching';
 import {caching2} from './assets/caching';
-import apolloql from './apolloql.jpg';
 import {query1, query2, query3, response} from './assets/queries';
 import serverSetupCode from './assets/serverSetup';
 import types1Code from './assets/types1';
@@ -75,11 +65,6 @@ export default class ApolloQL extends React.Component {
                 >
                     <Slide>
                         <Heading textColor="quartenary" fit>GraphQL with Apollo</Heading>
-                        {/*<Image src={apolloql} style={{*/}
-                        {/*position: "absolute",*/}
-                        {/*height: "100%",*/}
-                        {/*width: "100%",*/}
-                        {/*}}/>*/}
                     </Slide>
                     <Slide>
                         <Image src={ql1} display="inline"/>

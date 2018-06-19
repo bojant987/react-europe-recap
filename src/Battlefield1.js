@@ -4,30 +4,20 @@ import React from 'react';
 // Import Spectacle Core tags
 import {
     Appear,
-    BlockQuote,
-    Cite,
-    CodePane,
-    Code,
     Deck,
-    Fill,
-    Fit,
     Heading,
     Image,
-    Layout,
     ListItem,
     List,
-    Quote,
     Slide,
-    Text,
-    GoToAction
 } from 'spectacle';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
-import image1 from './btf1-ui-1.png';
-import image2 from './btf1-ui-2.jpg';
-import bf1 from './battlefield1.jpg';
-import reactLogo from './react.png';
+import image1 from './assets/btf1-ui-1.png';
+import image2 from './assets/btf1-ui-2.jpg';
+import bf1 from './assets/battlefield1.jpg';
+import reactLogo from './assets/react.png';
 import Back from './Back';
 
 const theme = createTheme(
@@ -57,7 +47,6 @@ export default class Battlefield1 extends React.Component {
                     theme={theme}
                 >
                     <Slide bgImage={bf1} bgSize="contain" bgRepeat="no-repeat" align="center flex-start">
-                        {/*<Heading textColor="quartenary" fit>Battlefield 1 + React</Heading>*/}
                         <Image src={reactLogo} width={360} />
                     </Slide>
                     <Slide>
