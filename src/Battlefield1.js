@@ -45,6 +45,7 @@ export default class Battlefield1 extends React.Component {
                     transition={['zoom', 'slide']}
                     transitionDuration={500}
                     theme={theme}
+                    contentWidth={1000}
                 >
                     <Slide bgImage={bf1} bgSize="contain" bgRepeat="no-repeat" align="center flex-start">
                         <Image src={reactLogo} width={360} />

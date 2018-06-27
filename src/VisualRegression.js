@@ -42,6 +42,7 @@ export default class VisualRegression extends React.Component {
                     transition={['fade', 'spin']}
                     transitionDuration={500}
                     theme={theme}
+                    contentWidth={1000}
                 >
                     <Slide>
                         <Heading textColor="quartenary" fit>Visual regression</Heading>
